@@ -1,0 +1,33 @@
+### Fast API is built on the top of two very famous pyhton libraries named starlette and pydantic
+### its a python framework to design a very high performance APIs
+### HTTP request and response happens through starelette
+### Pydantic is data validation lib (both format/ and correctness)
+### core philosophy-> fast to run/fast to code
+
+Why FASTAPI is fast to run??
+
+[web server] ---> [SGI]---> [API CODE]
+
+lets say for a ml model we are building an api are we have created
+an endppoint named "/predict" which takes features(f1, f2) and fetches and returns prediction
+now API is deployed on AWS (it means we have deployed API code and web server or AWS)
+web servers-> processes or helps in processig incoming http request
+API code -> contains business logic
+web servers forwards (HTTP request) to API code
+SGI(server gateway interface)->converts requests code to python code understandable to API code
+again api code sends results to web server through SGI
+
+Flask uses WSGI-> web server SGI //its synchronous in nature (1 request at a time) so blocking nature
+so no scalable APIs(wsgi implemeted using library-werkzeug)
+
+ASGI used by FastAPI->Asynchronous SGI 
+library used is starlette/multiple requests (uvicorn)
+ASGI supports async/await feature of python
+
+
+Why FastAPI is fast to code?
+1. Automatic input validation(using pydantic)
+2. Auto- generated interactive documentation
+3. Seamless integration with modern ecosystem (ml/dl libraries,OAuth,JWT,SQL,Docker, kubernetes etc)
+
+

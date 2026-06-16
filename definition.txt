@@ -31,3 +31,19 @@ Why FastAPI is fast to code?
 3. Seamless integration with modern ecosystem (ml/dl libraries,OAuth,JWT,SQL,Docker, kubernetes etc)
 
 
+HTTP Methods
+
+software--> static/dynamic
+calender->mostly static
+dynamic-> ms excel
+
+CRUD-> create,retrieve,update,delete
+
+same for websites
+websites->static/dynamic
+also interactions can only be CRUD
+retrieve->GET
+create-> POST
+update -> PUT
+Delete-> DELETE(verbs added in HTTP body)
+These are all HTTP Methods

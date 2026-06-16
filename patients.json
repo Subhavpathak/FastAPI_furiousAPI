@@ -1,0 +1,102 @@
+{
+  "P001": {
+    "name": "Ananya Sharma",
+    "city": "Guwahati",
+    "age": 28,
+    "gender": "female",
+    "height": 1.65,
+    "weight": 55,
+    "bmi": 22,
+    "verdict": "normal"
+  },
+  "P002": {
+    "name": "Rahul Verma",
+    "city": "Patna",
+    "age": 32,
+    "gender": "male",
+    "height": 1.75,
+    "weight": 82,
+    "bmi": 26.8,
+    "verdict": "overweight"
+  },
+  "P003": {
+    "name": "Priya Nair",
+    "city": "Kochi",
+    "age": 24,
+    "gender": "female",
+    "height": 1.60,
+    "weight": 48,
+    "bmi": 18.7,
+    "verdict": "normal"
+  },
+  "P004": {
+    "name": "Arjun Singh",
+    "city": "Jaipur",
+    "age": 35,
+    "gender": "male",
+    "height": 1.80,
+    "weight": 95,
+    "bmi": 29.3,
+    "verdict": "overweight"
+  },
+  "P005": {
+    "name": "Sneha Das",
+    "city": "Bhubaneswar",
+    "age": 29,
+    "gender": "female",
+    "height": 1.58,
+    "weight": 44,
+    "bmi": 17.6,
+    "verdict": "underweight"
+  },
+  "P006": {
+    "name": "Vikram Joshi",
+    "city": "Pune",
+    "age": 41,
+    "gender": "male",
+    "height": 1.72,
+    "weight": 70,
+    "bmi": 23.7,
+    "verdict": "normal"
+  },
+  "P007": {
+    "name": "Meera Kapoor",
+    "city": "Delhi",
+    "age": 26,
+    "gender": "female",
+    "height": 1.68,
+    "weight": 78,
+    "bmi": 27.6,
+    "verdict": "overweight"
+  },
+  "P008": {
+    "name": "Karan Mehta",
+    "city": "Ahmedabad",
+    "age": 30,
+    "gender": "male",
+    "height": 1.83,
+    "weight": 68,
+    "bmi": 20.3,
+    "verdict": "normal"
+  },
+  "P009": {
+    "name": "Neha Roy",
+    "city": "Kolkata",
+    "age": 22,
+    "gender": "female",
+    "height": 1.62,
+    "weight": 92,
+    "bmi": 35.1,
+    "verdict": "obese"
+  },
+  "P010": {
+    "name": "Rohan Kulkarni",
+    "city": "Mumbai",
+    "age": 38,
+    "gender": "male",
+    "height": 1.77,
+    "weight": 63,
+    "bmi": 20.1,
+    "verdict": "normal"
+  }
+}

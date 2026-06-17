@@ -47,3 +47,39 @@ create-> POST
 update -> PUT
 Delete-> DELETE(verbs added in HTTP body)
 These are all HTTP Methods
+
+
+Path Parameters && Query Parameters
+
+Path params:
+Path Params are dynamic segments of a URL path used to identify a specific resource
+localhost:8000/view
+localhost:8000/view/3   here 3 is dynamic segments
+this is path Parameter
+
+The Path function in FastAPI is used to provide metadata,validation
+rules,and documentation hints for path parameters in your
+API endpoints
+Title
+Description
+Example
+ge,gt,le,lt 
+Min_length,Max_length
+regex
+
+
+
+HTTP status code -> 3 digit number to indicate results
+
+
+
+## QUERY Parameter 
+
+Query parameter are optional key value pairs appended to the end of a URL used to pass additional
+data to the server in an HTTP request. they are typically employed for operations
+like filtering , sorting , searching without altering the endpoint path itself.
+
+sortby=""/ oder=desc/asc after ? we send query parameters 
+
+Query() is a utility function provided by FASTAPI to declare,validate and doxument 
+query parameters in our API endpoints

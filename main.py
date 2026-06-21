@@ -1,6 +1,6 @@
 from fastapi import FastAPI,Path,HTTPException,Query
 from pydantic import BaseModel,Field,computed_field
-from typing import Annotated,Literal
+from typing import Annotated,Literal, Optional
 from fastapi.responses import JSONResponse
 import json
 app = FastAPI()
@@ -90,3 +90,37 @@ def create_patient(patient: Patient):
         json.dump(data, f, indent=4)
     
     return JSONResponse(status_code=201, content={"message": "Patient created successfully" })
+
+
+## PUT METHOD
+
+#edit/ update existing patient data
+
+# build a new pydantic model
+class PatientUpdate(BaseModel):
+    name: Annotated[Optional[str], Field(None, description="Name of the patient")]
+    city: Annotated[Optional[str], Field(None, description="City where the patient resides")]
+    age: Annotated[Optional[int], Field(None,gt=0, description="Age of the patient")]
+    gender: Annotated[Optional[Literal["Male", "Female", "Other"]], Field(None, description="Gender of the patient")]
+    height: Annotated[Optional[float], Field(None, description="Height of the patient")]
+    weight: Annotated[Optional[float], Field(None, description="Weight of the patient")]
+
+
+@app.put("/edit/{patient_id}")
+def update_patient(patient_id: str, patient_update: PatientUpdate):
+    data = load_data()
+    if patient_id not in data:
+        raise HTTPException(status_code=404, detail="Patient not found")
+    
+    existing_patient = Patient(id=patient_id, **data[patient_id])
+    updated_data = patient_update.model_dump(exclude_unset=True)
+    updated_patient = existing_patient.model_copy(update=updated_data)
+    
+    data[patient_id] = updated_patient.model_dump(exclude=['id'])
+    
+    with open("patients.json", "w") as f:
+        json.dump(data, f, indent=4)
+    
+    return {"message": "Patient updated successfully"}
+
+

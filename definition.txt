@@ -25,7 +25,7 @@ library used is starlette/multiple requests (uvicorn)
 ASGI supports async/await feature of python
 
 
-Why FastAPI is fast to code?
+Why FastAPI is fast to code?  
 1. Automatic input validation(using pydantic)
 2. Auto- generated interactive documentation
 3. Seamless integration with modern ecosystem (ml/dl libraries,OAuth,JWT,SQL,Docker, kubernetes etc)
@@ -33,7 +33,7 @@ Why FastAPI is fast to code?
 
 HTTP Methods
 
-software--> static/dynamic
+software--> static/dynamic  
 calender->mostly static
 dynamic-> ms excel
 
@@ -81,5 +81,22 @@ like filtering , sorting , searching without altering the endpoint path itself.
 
 sortby=""/ oder=desc/asc after ? we send query parameters 
 
-Query() is a utility function provided by FASTAPI to declare,validate and doxument 
+Query() is a utility function provided by FASTAPI to declare,validate and document 
 query parameters in our API endpoints
+
+
+
+#### Serving ML Models with FASTAPI
+
+model.pkl<=>API<=>Frontend
+
+## method used will be POST (/predict)
+we want to send some data for processing so POST should be used
+make dataframe from data which is validated from pydantic class and then pass it to the model to get the prediction 
+
+for cloud services hosting we need to make .get(/health) api endpoint for health checkup by cloud services 
+
+
+
+ 
+

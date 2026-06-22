@@ -241,4 +241,7 @@ The files associated with docker are:
 3. requrements.text
 
 
+Now docker login
+then docker push repo/proj-name
+to push it to docker-hub
 

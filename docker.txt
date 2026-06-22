@@ -147,3 +147,57 @@ Ex- VOLUME["/data"]
 Arguments(ARG) : Defines build time variables
 eg- ARG VERSION =1.0
 
+Docker container
+
+A docker container is a lightweight,portable and isolated environment
+that encapsulates an application and its dependencies allowing it to run consistently across
+different computing environments. Containers are created from docker images which are immutable and contains
+all the necessary components for the applications to run.
+
+
+Registry:
+A docker registry is a service that stores and ditributes docker images. It acts as a repository where users
+can push,pull and manage docker images. Docker hub is the most well known public reigstry but private registries can also be set up
+to securely store and manage images within an organisation.
+
+key components of a docker registry:
+
+1. Repositories: A repository is a collection if related docker images typically different versions of same application
+Each reppository can hold multiple tags respresenting different versions of an image
+
+2.Tags : Tags are used to version images within a  repository. Ex- myapp:1.0, myapp:2.0 are tags for different versions of myapp image.
+
+Type of docker registries:
+1. Docker hub:
+
+Description: The default public registry provided by docker which hosts a vast number of public images and also supports private repositories.
+URL: hub.docker.com
+Use case: Publicly sharing images and accessing a large collection of pre-built images from the community and official repositories.
+
+2. Private Registries:
+Description: Custom registries set up by orgs to securely store and manage their own docker images.
+Use Cases: Ensuring security and control over image distribution within an organisation.
+
+3. Third party registries:
+Examples: Amazon elastic conatiner registry , google conatiner registry and azure container registry.
+
+Use cases: Integrating with cloud platforms for seamless dployment and management of images within cloud infrastructure.
+
+Benifits of docker registries:
+1. Centralised management
+2. version control
+3. collaboration
+4. security
+5. integration with CI/CD
+
+
+
+
+
+
+
+
+
+
+
+

@@ -191,7 +191,19 @@ Benifits of docker registries:
 5. integration with CI/CD
 
 
+Use cases of docker:
+1. Microservices architecture
+-> Microservices break down applications into smaller independent services each running in its own container.
+-> Simplifies deployment, scaling and maintenance. Each service can be developed updated and deployed independently.
 
+2. Continuous integration and continuous deployment
+-> Docker ensures consistent environment from development through testing to producton.
+
+3. cloud migration
+-> containerising appls to move them to cloud .
+
+4. scalable web apps
+5. ML and AI 
 
 
 

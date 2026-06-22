@@ -96,23 +96,54 @@ Metadata: Information about the image such as environment variables labels and e
 
 
 
+Docker Image lifecycle
+
+1. Creation: Images are created using the docker build command which processes the instructions
+in a Dockerfile to create image layers.
+
+2. Storage : Images are stored locally on the host machine . They can also be pushed to and 
+pulled from docker registries like Docker Hub, AWS ECR or google container registry.
+
+3. Distribution: Images can be shared by pushing them to a docker registry allowing others to pull and use the same image.
+
+4. Execution: images are executed by running conatiners which are instances of the images.
+
+Dokcerfile:
+A dockerfile is a textfile that contains a series of instructions used to build  a docker image
+Each instruction in a dockerfile creates a layer in the image allowing for efficient image creation and reuse of layers.
+Dockerfiles are used to automate the image creation process ensuring consistency and reproducibility.
 
 
+Key components of a dockerfile:
+
+Base Image (FROM): Specifies the starting point for the image , which could be a minimal OS
+a specific version of language runtime or another image.
+eg- FROM ubuntu:20.04
+
+Labels (LABEL): Adds metadata to the image such as version , description or maintainer
+Eg- LABEL version ="1.0" description="My application"
+
+Run Commands (RUN): Executes commands in the image during the build prcocess typically used to install software packages.
+Eg- RUN apt-get update
+
+Copy Files(COPY)- Copies files or directories from the host system to the image 
+
+Environment Variables (ENV) : Sets env in the image
+
+Work Directory(WORKDIR): Sets the working directory for subsequent instructions
+ex-> WORKDIR/app
 
 
+Expose Ports(EXPOSE): Informs docker that container listens on specified network ports. 
+eg- EXPOSE 8080
 
+Command (CMD): Provides a deafault command to run when the conatainer starts.
+Example: CMD["pyhton","app.py"]
 
+Volume (VOLUME): Creates a mount point with a specified path and marks it as holding
+externally mounted volumes from the host or other containers.
+Ex- VOLUME["/data"]
 
-
-
-
-
-
-
-
-
-
-
-
-
+Arguments(ARG) : Defines build time variables
+eg- ARG VERSION =1.0
 

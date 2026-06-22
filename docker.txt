@@ -1,0 +1,118 @@
+### Docker
+
+Docker is a platform designe dto help developers 
+build share and run container apps
+
+Analogy
+in maggie packet we have both noodles + masala ...same taste everytime right?
+now assume what would happen if we had noodles+recipe book to make masala
+everytime different taste right??
+
+same with software
+what if instead of code we make container of both codes + requirements
+
+Why do we need dockers?
+
+1. consistency across environments
+Problem: Applications behave differently in development
+testing and production environments due to variation in
+config, dependencies and infras
+
+Solution: Docker container encapsulate all the necessary
+components ensuring the app runs consistently across all environments
+
+eg- mismatch of versions of libraries and all 
+
+2. Isolation 
+Problem : Running multiple applications on the same host can lead
+to conflicts such as dependency clashes or resource contention
+
+Solution: Docker provides isolated environments for each applications
+preventing interference and esnuring stable performance
+
+//VMs also provide it but very heavy  
+//dockers are very lightweight
+
+3. Scalability
+
+Problem: scaling applications to handle increased load can be challenging
+requiring manual intervention and configuration
+
+Solution : docker makes it easy to scale applications horizontally
+by running multiple container instances allowing for quick and 
+efficient scaling
+
+How exactly Docker is used?
+
+so first go through the defintions
+
+1. Docker Engine
+
+It is the core component of Docker Platform responsible for creating,
+running, and managing the docker containers. It serves as the runtime that powers
+Docker's containerization capabilities.
+
+server (docker daemon)+ Rest API+ client docker CLI
+
+Components of docker engine 
+1. Docker daemon (dockerd):
+Function : It is the background service running on the host machine.
+It manages docker objects such as images, conatiners, networks and volumes.
+
+Interaction: It listens for Docker API requests and processes them
+handling container lifecycle operations(start,stop , restart etc)
+
+Docker CLI (docker)
+
+function: tool that users interact with to communicate with daemon
+
+usage : users run docker commands through the CLI to perform 
+tasks like building images, running containers, and managing docker resources
+
+Rest API:
+Function: The Docker REST API allows communication between docker CLI 
+and daemon. 
+
+Usage: Devs can use the API to automate docker operations or integrate
+Docker funtionality into their applications.
+
+Docker Images:
+A docker image is a lightweight , stand-alone, and executable
+software package that includes everything needed to run a piece
+of software , such as the code , runtime, libraries,
+environment variables and config files. Images are used to create
+Docker containers, which are instances of these images.
+
+Components of docker image:
+
+Base Image : The starting point for building an image. It could be a minimal OS image
+like alpine or full fledged OS like ubuntu or another application image like python or node.
+
+Application Code: The actual code and files necessary for the application to run
+
+Dependencies: Libraries,frameworks and packages required by the application.
+
+Metadata: Information about the image such as environment variables labels and exposed ports.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -207,9 +207,38 @@ Use cases of docker:
 
 
 
+HOW TO USE DOCKER?
+1. Install docker desktop
+2. Open docker hub
+# sign in to both
+3. Verify docker desktop correct installation through CLI
+command 1 : docker
+command 2: docker pull hello-world //will be visible in images
+command 3: docker run hello-world // will be  visible in containers
+now start working on your project
+
+docker pull your-project
+docker run -p 8501:8501 proj-name //port mapping
 
 
+The above process was for running already made image.
 
+Now we will see how to create an image and how to push it to docker hub
+
+firstly create your project
+for demo we have app.py a basic flask application
+
+so now create a dockerfile
+then in terminal run command docker build -t repo/prj-name .
+image is successfully built
+
+then docker run -p 8888:5000 repo/proj-name
+
+
+The files associated with docker are:
+1. app.py
+2. Dockerfile
+3. requrements.text
 
 
 

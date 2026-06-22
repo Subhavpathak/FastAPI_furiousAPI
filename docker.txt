@@ -245,3 +245,32 @@ Now docker login
 then docker push repo/proj-name
 to push it to docker-hub
 
+
+Now we will see how to deploy FastAPI API on AWS
+
+Create AWS EC2 instance (elastic compute net)
+search EC2
+launch instance
+create key - pair for remote login
+then launch instance
+
+then connect to ec2 instance
+direct through UI , it will open a terminal
+
+then run the following commands
+sudo apt-get update
+sudo apt-get install -y docker.io 
+sudo systemctl start docker
+sudo systemctl enable docker  //always when instance wakes up docker starts running
+sudo usermod -aG docker $USER  //permission for image pull
+exit 
+
+restart a new connection to EC2 instance
+then 
+docker pull repo/proj-name
+docker run -p 8000:8000 repo/proj-name
+
+now set security rule
+edit inbound rules
+custom tcp 8000 from any ip 0.0.0.0
+
